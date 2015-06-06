@@ -22,18 +22,29 @@
 		
 		scene = new THREE.Scene();
 		
-		// Sphere
+		// Earth Sphere
+		var EARTH_RADIUS = 5;
 		var textureLoader = new THREE.TextureLoader();
 		textureLoader.load('assets/earth.jpg', function (texture) {
-			var geometry = new THREE.SphereGeometry(5, 32, 32);
+			var geometry = new THREE.SphereGeometry(EARTH_RADIUS, 32, 32);
 			var material = new THREE.MeshLambertMaterial({map: texture});
 			var sphere = new THREE.Mesh(geometry, material);
 			sphere.rotation.y = 250 * Math.PI / 180;
 			scene.add(sphere);
 		});
 		
+		// Moon Sphere
+		textureLoader.load('assets/moon.jpg', function (texture) {
+			var geometry = new THREE.SphereGeometry(EARTH_RADIUS*0.27, 32, 32);
+			var material = new THREE.MeshLambertMaterial({map: texture});
+			var sphere = new THREE.Mesh(geometry, material);
+			sphere.position.set(EARTH_RADIUS*5, 0, 0); //30
+			sphere.rotation.y = 180 * Math.PI / 180;
+			scene.add(sphere);
+		});
+		
 		// Lights
-		var ambientLight = new THREE.AmbientLight(0x999999);
+		var ambientLight = new THREE.AmbientLight(0x888888);
 		scene.add(ambientLight);
 		
 		var spotLight = new THREE.PointLight(0xffffff);
