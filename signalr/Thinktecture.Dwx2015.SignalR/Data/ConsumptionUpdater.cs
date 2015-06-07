@@ -39,7 +39,7 @@ namespace Thinktecture.Dwx2015.SignalR.Data
 			var data = _dataProvider.Data;
 
 			var continent = (Continent)_random.Next(0, data.Count);
-			var newValue = Math.Sin(_random.NextDouble())*100;
+			var newValue = _random.NextDouble()*100;
 
 			Clients.UpdateConsumption(continent.ToString(), newValue);
 			Console.WriteLine("Update contintent {0} to be {1}", continent, newValue);
