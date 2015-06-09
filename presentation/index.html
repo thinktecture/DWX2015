@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Cross platform 2D &amp; 3D visualizations</title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            			link.rel = 'stylesheet';
+            			link.type = 'text/css';
+            			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            			document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!--[if lt IE 9]>
+            <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1 class="tt-color">Guckst du!</h1>
+                    <h3>Cross-Plattform 2D- &amp; 3D-Datenvisualisierung in JavaScript</h3>
+                    <p>
+                        <small>Christian Liebel, Christian Weyer</small>
+                    </p>
+                    <p><img src="images/ttLogo.png" style="width: 15%" class="tt-logo" /><br/>
+                    <small><a href="http://thinktecture.com" class="tt-link">thinktecture.com</a></small></p>
+                </section>
+                <section>
+                    <h2>Introduction</h2>
+                    <table class="narrow">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center"><img src="images/cw.png" class="portrait" /><br/>Christian Weyer</th>
+                                <th style="text-align: center"><img src="images/cl.png" class="portrait" /><br/>Christian Liebel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p><small>christian.weyer@thinktecture.com</small></p>
+                                    <p><small>@christianweyer</small></p>
+                                </td>
+                                <td>
+                                    <p><small>christian.liebel@thinktecture.com</small>
+                                    <p><small>@chris_liebel</small></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Agenda</h2>
+                    <ul>
+                        <li>Samples</li>
+                        <li>Scenario</li>
+                        <li>2D visualization</li>
+                        <li>3D visualization</li>
+                        <li>Q&A</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Samples</h1>
+                    <h2>What’s possible with HTML5 and JavaScript</h2>
+                </section>
+                <section>
+                    <h2>Touch-Enabled Graphs</h2>
+                    <a href="https://zoomcharts.com/en/gallery/all:network-graph-company-network-icons" target="_blank">
+                        <img src="images/examples_1_graph.jpg" alt="Touch-Enabled, Fast and Fluid Graphs" />
+                        <p>https://zoomcharts.com/en/gallery/all:network-graph-company-network-icons</p>
+                    </a>
+                </section>
+                <section>
+                    <h2>Real-Time Video Manipulation</h2>
+                    <a href="http://www.craftymind.com/factory/html5video/CanvasVideo.html" target="_blank">
+                        <img src="images/examples_2_video.jpg" alt="Real-Time Video Manipulation" />
+                        <p>http://www.craftymind.com/factory/html5video/CanvasVideo.html</p>
+                    </a>
+                </section>
+                <section>
+                    <h2>Interactive 3D Visualizations</h2>
+                    <a href="https://www.blend4web.com/apps/webplayer/webplayer.html?load=../../assets/animation/nla_strips.json" target="_blank">
+                        <img src="images/examples_3_screws.jpg" alt="Interactive 3D Visualizations" />
+                        <p>https://www.blend4web.com/apps/webplayer/webplayer.html?load=../../assets/animation/nla_strips.json</p>
+                    </a>
+                </section>
+                <section>
+                    <h2>…Even Games</h2>
+                    <a href="http://www.flightarcade.com/" target="_blank">
+                        <img src="images/examples_4_flightarcade.jpg" alt="…Even Games" />
+                        <p>http://www.flightarcade.com/</p>
+                    </a>
+                </section>
+                <section>
+                    <h1>Scenario</h1>
+                </section>
+                <section>
+                    <h2>Architecture</h2>
+                    <ul>
+                        <li>No Windows today :-(</li>
+                        <li>SignalR on Mono on Raspbian on Raspberry Pi 2</li>
+                        <li>Communication: WebSockets</li>
+                        <li>2D client based on HTML5 and JavaScript</li>
+                        <li>3D client based on HTML5 and JavaScript</li>
+                        <li>Packaging the clients as an app using Cordova</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1 style="color: lime;">Gummibears!</h1>
+                    <img src="images/gummibears.jpg" alt="Gummi Bears" />
+                    <p>(Bouncing here and there and everywhere)</p>
+                </section>
+                <section>
+                    <h2>Goal</h2>
+                    <p>Visualizing real-time consumption of gummibears per region</p>
+                    <code style="color: gray;">
+                        <pre>
+Update consumption of SouthAmerica to 13.3137317022187
+Update consumption of NorthAmerica to 42.3913583840353
+Update consumption of Antarctica to 83.7786154045535
+Update consumption of Europe to 18.0006652489046
+Update consumption of Africa to 4.14845326099586
+Update consumption of Europe to 15.5524369351959
+Update consumption of NorthAmerica to 19.4715459649452
+Update consumption of Asia to 25.5628347470509
+Update consumption of Europe to 3.95552857364278
+Update consumption of SouthAmerica to 17.4139201632193
+Update consumption of Antarctica to 53.6258920336672
+Update consumption of Australia to 12.5058280857318
+</pre>
+                    </code>
+                </section>
+                <section>
+                    <h1>2D visualization</h1>
+                </section>
+                <section>
+                    <h2><code>&lt;canvas&gt;</code></h2>
+                    <ul>
+                        <li>Plain bitmap for the web</li>
+                        <li>Content is defined by contexts</li>
+                        <li>Cross platform graphic manipulations</li>
+                        <li>High performance</li>
+                        <li>Low energy consumption</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Browser support</h2>
+                    <img src="images/browsersupport.png" />
+                    <p>
+                        <small>From <a href="http://caniuse.com/#search=canvas">http://caniuse.com/#search=canvas</a></small>
+                    </p>
+                </section>
+                <section>
+                    <h2>Performance</h2>
+                    <h3>Chrome @ MacBook Pro</h3>
+                    <img src="images/jsperf.png" />
+                    <p>
+                        <small>From <a href="http://jsperf.com/html-vs-svg-vs-canvas/31">http://jsperf.com/html-vs-svg-vs-canvas/31</a></small>
+                    </p>
+                </section>
+                <section>
+                    <h2>requestAnimationFrame</h2>
+                    <ul>
+                        <li>Only executed when visible to the user <br/> (will stop in background tabs!).</li>
+                        <li>No wastage of CPU and battery life.</li>
+                        <li>Frame is only drawn when browser is ready and no other frame waits for drawing.</li>
+                        <li>No “infinite” amount of queued callback functions.</li>
+                    </ul>
+                    <p>
+                                <small>From <a href="https://dev.opera.com/articles/better-performance-with-requestanimationframe/">https://dev.opera.com/articles/better-performance-with-requestanimationframe/</a></small>
+                            </p>
+                </section>
+                <section>
+                    <h2>Libraries</h2>
+                    <ul>
+                        <li>D3.js</li>
+                        <li>Chart.js</li>
+                        <li>ZoomCharts</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Demo</h2>
+                    <h3>Touch-enabled, cross-platform 2D visualization using ZoomCharts</h3>
+                </section>
+                <section>
+                    <h1>3D visualization</h1>
+                </section>
+                <section>
+                    <h2><span style="color:hotpink;">3D</span> Content<br/>in a <span style="color:hotpink;">3D</span> world<br/>with <span style="color:lime;">2D</span> screens</h2>
+                    <p>scenes, cameras, rendering</p>
+                </section>
+                <section>
+                    <section>
+                        <h2>WebGL</h2>
+                        <ul>
+                            <li>Web Graphics Library</li>
+                            <li>Hardware accelerated (GPU)</li>
+                            <li>New canvas rendering context <code>webgl</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Proven Technology</h2>
+                        <ul>
+                            <li>Based on OpenGL for Embedded Systems</li>
+                            <li>Blender & Unity can export to WebGL</li>
+                            <li>ANGLE (Chrome/Firefox): Rendering on Direct3D</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>three.js</h2>
+                        <ul>
+                            <li>Native WebGL <em>is</em> complex</li>
+                            <li>Open-source JavaScript library</li>
+                            <li>High-level API abstracting WebGL (and more)</li>
+                        </ul>
+                    </section>                    
+                    <section>
+                        <h2>Structure</h2>
+                        <ul>
+                            <li>Geometry: shape (cube, sphere, …)</li>
+                            <li>Material: color, texture, light reflection</li>
+                            <li>Mesh: 3D object (geometry + material)</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>Browser support</h2>
+                    <img src="images/browsersupport-webgl.jpg" />
+                    <p>
+                        <small>From <a href="http://caniuse.com/#search=webgl">http://caniuse.com/#search=webgl</a></small>
+                    </p>
+                </section>
+                <section>
+                    <h2>Mobile Platform Support</h2>
+                    <ul>
+                        <li>iOS 8+</li>
+                        <li>Android</li>
+                        <ul>
+                            <li>WebView 36+</li>
+                            <li>Crosswalk</li>
+                        </ul>
+                        <li>Windows (Phone) 8.1+</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2>Controls</h2>
+                        <ul>
+                            <li>Mouse/Keyboard</li>
+                            <li>Touch</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>A word on touch events…</h2>
+                        <ul>
+                            <li>Pointer Events vs. Touch Events</li>
+                            <li>Browser support varies on desktop</li>
+                            <li>three.js controls only support Touch Events</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>Live Demo</h2>
+                    <blockquote>“If you believed<br/>they put a man on the moon<br/>man on the moon”<br/>— R.E.M.</blockquote>
+                </section>
+                <section>
+                    <h2>Live Demo</h2>
+                    <h3>Animations make the difference</h3>
+                </section>
+                <section>
+                    <h1>Summary</h1>
+                    <ul>
+                        <li>Cross platform high-performance graphic manipulation</li>
+                        <li>2D &amp; 3D</li>
+                        <li>Hardware acceleration</li>
+                        <li>Supported by all major browsers</li>
+                        <li>Touch-enabled</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h1>Thank you!</h1>
+                    <p>
+                        GitHub repository: <a href="https://github.com/thinktecture/DWX2015">https://github.com/thinktecture/DWX2015</a>
+                    </p>
+                    <div style="height: 150px"></div>
+                    <p><img src="images/ttLogo.png" style="width: 15%" class="tt-logo" /><br/>
+                    <small><a href="http://thinktecture.com" class="tt-link">thinktecture.com</a></small></p>
+                </section>
+                <section>
+                    <h1>Resources</h1>
+                    <small>
+                    <ul>
+                        <li>TBD</li>  
+                    </ul></small>
+                </section>
+            </div>
+        </div>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+            // Full list of configuration options available at:
+            			// https://github.com/hakimel/reveal.js#configuration
+            			Reveal.initialize({
+                            history: true,
+            				transition: 'slide', // none/fade/slide/convex/concave/zoom
+            
+            				// Optional reveal.js plugins
+            				dependencies: [
+            					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+            					{ src: 'plugin/zoom-js/zoom.js', async: true }
+            				]
+            			});
+        </script>
+    </body>
+
+</html>
