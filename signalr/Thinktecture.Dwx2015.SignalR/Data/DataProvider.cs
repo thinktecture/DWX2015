@@ -4,7 +4,9 @@ namespace Thinktecture.Dwx2015.SignalR.Data
 {
 	public class DataProvider
 	{
-		public DataProvider()
+		public static Dictionary<Continent, double> Data { get; private set; }
+
+		static DataProvider()
 		{
 			Data = new Dictionary<Continent, double>
 			{
@@ -18,7 +20,5 @@ namespace Thinktecture.Dwx2015.SignalR.Data
 				{Continent.Moon, 1}
 			};
 		}
-
-		public Dictionary<Continent, double> Data { get; private set; } 
 	}
 }

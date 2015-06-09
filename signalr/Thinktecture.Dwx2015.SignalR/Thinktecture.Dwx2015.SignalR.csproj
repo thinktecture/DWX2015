@@ -34,12 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.1.3\lib\net40\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Autofac.Integration.SignalR">
-      <HintPath>..\packages\Autofac.SignalR.3.0.2\lib\net40\Autofac.Integration.SignalR.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
@@ -82,10 +76,8 @@
   <ItemGroup>
     <Compile Include="Data\DataProvider.cs" />
     <Compile Include="Data\Continent.cs" />
+    <Compile Include="Data\DataUpdater.cs" />
     <Compile Include="GummibearHub.cs" />
-    <Compile Include="Data\ConsumptionUpdater.cs" />
-    <Compile Include="IGummibearClientHub.cs" />
-    <Compile Include="IGummibearServerHub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
+using Thinktecture.Dwx2015.SignalR.Data;
 
 namespace Thinktecture.Dwx2015.SignalR
 {
@@ -14,6 +16,8 @@ namespace Thinktecture.Dwx2015.SignalR
 				Console.WriteLine("... on Mono!");
 #endif
 
+				Task.Factory.StartNew(() => new DataUpdater());
+				
 				Console.ReadLine();
 			}
 		}
