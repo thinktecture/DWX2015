@@ -116,11 +116,11 @@
                     <h2>Architecture</h2>
                     <ul>
                         <li>Windows: everybody can do it ;)</li>
-                        <li>SignalR on Mono on Raspbian on Raspberry Pi 2</li>
-                        <li>Communication: WebSockets</li>
-                        <li>2D client based on HTML5 and JavaScript</li>
-                        <li>3D client based on HTML5 and JavaScript</li>
-                        <li>Packaging the clients as an app using Cordova</li>
+                        <li class="fragment">SignalR on Mono on Raspbian on Raspberry Pi 2</li>
+                        <li class="fragment">Communication: WebSockets</li>
+                        <li class="fragment">2D client based on HTML5 and JavaScript</li>
+                        <li class="fragment">3D client based on HTML5 and JavaScript</li>
+                        <li class="fragment">Packaging the clients as an app using Cordova</li>
                     </ul>
                 </section>
                 <section>
@@ -146,26 +146,15 @@ Update consumption of Australia to 12.5058280857318</code></pre>
                     <h1>2D visualization</h1>
                 </section>
                 <section>
-                    <h2><code>&lt;canvas&gt;</code></h2>
-                    <ul>
-                        <li>Plain bitmap for the web</li>
-                        <li>Content is defined by contexts</li>
-                        <li>Cross platform graphic manipulations</li>
-                        <li>High performance</li>
-                        <li>Low energy consumption</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Browser support</h2>
-                    <img src="images/browsersupport.png" />
-                    <p>
-                        <small>From <a href="http://caniuse.com/#search=canvas">http://caniuse.com/#search=canvas</a></small>
-                    </p>
-                </section>
-                <section>
                     <section>
-                        <h2>request<span style="color: lime;">Animation</span>Frame</h2>
-                        <h3>vs. Timers/setTimeout/setInterval</h3>
+                        <h2><code>&lt;canvas&gt;</code></h2>
+                        <ul>
+                            <li>Plain bitmap for the web</li>
+                            <li>Content is defined by contexts</li>
+                            <li>Cross platform graphic manipulations</li>
+                            <li>High performance/Low energy consumption</li>
+                            <li><code>requestAnimationFrame</code></li>
+                        </ul>
                     </section>
                     <section>
                         <h2>requestAnimationFrame</h2>
@@ -176,6 +165,13 @@ Update consumption of Australia to 12.5058280857318</code></pre>
                             <li>No stacking/queueing</li>
                         </ul>
                     </section>
+                </section>
+                <section>
+                    <h2>Browser support</h2>
+                    <img src="images/browsersupport.png" />
+                    <p>
+                        <small>From <a href="http://caniuse.com/#search=canvas">http://caniuse.com/#search=canvas</a></small>
+                    </p>
                 </section>
                 <section>
                     <h2>Charting Libraries</h2>
@@ -209,40 +205,22 @@ Update consumption of Australia to 12.5058280857318</code></pre>
                     <p>scenes, cameras, rendering</p>
                 </section>
                 <section>
-                    <section>
-                        <h2>WebGL</h2>
-                        <ul>
-                            <li>Web Graphics Library</li>
-                            <li>Hardware accelerated (GPU)</li>
-                            <li>New canvas rendering context <code>webgl</code></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Proven Technology</h2>
-                        <ul>
-                            <li>Based on OpenGL for Embedded Systems</li>
-                            <li>Blender & Unity can export to WebGL</li>
-                            <li>ANGLE (Chrome/Firefox): Rendering on Direct3D</li>
-                        </ul>
-                    </section>
+                    <h2>WebGL</h2>
+                    <ul>
+                        <li>Web Graphics Library</li>
+                        <li>Hardware accelerated (GPU)</li>
+                        <li>New canvas rendering context <code>webgl</code></li>
+                        <li>Proven Technology: based on OpenGL ES</li>
+                        <li>Can be exported from Blender and Unity</li>
+                    </ul>
                 </section>
                 <section>
-                    <section>
-                        <h2>three.js</h2>
-                        <ul>
-                            <li>Native WebGL <em>is</em> complex</li>
-                            <li>Open-source JavaScript library</li>
-                            <li>High-level API abstracting WebGL (and more)</li>
-                        </ul>
-                    </section>                    
-                    <section>
-                        <h2>Structure</h2>
-                        <ul>
-                            <li>Geometry: shape (cube, sphere, …)</li>
-                            <li>Material: color, texture, light reflection</li>
-                            <li>Mesh: 3D object (geometry + material)</li>
-                        </ul>
-                    </section>
+                    <h2>three.js</h2>
+                    <ul>
+                        <li>Native WebGL <em>is</em> complex</li>
+                        <li>Open-source JavaScript library</li>
+                        <li>High-level API abstracting WebGL (and more)</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Browser support</h2>
@@ -262,23 +240,6 @@ Update consumption of Australia to 12.5058280857318</code></pre>
                         </ul>
                         <li>Windows (Phone) 8.1+</li>
                     </ul>
-                </section>
-                <section>
-                    <section>
-                        <h2>Controls</h2>
-                        <ul>
-                            <li>Mouse/Keyboard</li>
-                            <li>Touch</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>A word on touch events…</h2>
-                        <ul>
-                            <li>Pointer Events vs. Touch Events</li>
-                            <li>Browser support varies on desktop</li>
-                            <li>three.js controls only support Touch Events</li>
-                        </ul>
-                    </section>
                 </section>
                 <section>
                     <h2>Live Demo</h2>
