@@ -1,0 +1,1 @@
+(cd cordova && cordova platform add ios)
