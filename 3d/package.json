@@ -1,0 +1,25 @@
+{
+  "name": "DWX2015-3D",
+  "version": "1.0.0",
+  "description": "3D sample for DWX 2015",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinktecture/DWX2015"
+  },
+  "keywords": [
+    "3D",
+    "Canvas",
+    "Earth"
+  ],
+  "author": "Christian Liebel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thinktecture/DWX2015/issues"
+  },
+  "homepage": "https://github.com/thinktecture/DWX2015",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11"
+  }
+}

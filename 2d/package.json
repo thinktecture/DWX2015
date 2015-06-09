@@ -1,0 +1,25 @@
+{
+  "name": "DWX2015-2D",
+  "version": "1.0.0",
+  "description": "2D sample for DWX 2015",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinktecture/DWX2015"
+  },
+  "keywords": [
+    "2D",
+    "Canvas",
+    "Chart"
+  ],
+  "author": "Christian Liebel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thinktecture/DWX2015/issues"
+  },
+  "homepage": "https://github.com/thinktecture/DWX2015",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11"
+  }
+}
