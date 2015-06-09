@@ -53,12 +53,12 @@
 		"Antarctica": {
 			position: new THREE.Vector3(0, -EARTH_RADIUS, 0),
 			rotation: new THREE.Vector3(0, 0, degToRad(-180)),
-			color: 0xf00f00
+			color: 0xffffff
 		},
 		"Moon": {
 			position: new THREE.Vector3(MOON_DISTANCE, MOON_RADIUS, 0),
 			rotation: new THREE.Vector3(0, 0, 0),
-			color: 0xf000f0
+			color: 0xffffff
 		}
 	};
 	
