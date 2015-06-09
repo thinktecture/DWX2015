@@ -13,6 +13,7 @@
 	var VISUALIZER_EDGE_LENGTH = 0.75;
 	var VISUALIZER_DEPTH_FACTOR = EARTH_RADIUS / 75;
 	var NINETY_DEGREES_IN_RAD = degToRad(90);
+	var SIGNAL_R_ENDPOINT = 'http://10.211.55.3:8080';
 	
 	var data;
 	var container, camera, scene, renderer, controls, stats;
@@ -84,22 +85,22 @@
 	window.addEventListener('resize', onResize);
 	
 	function setupSignalR() {
-		var hubConnection = $.hubConnection('http://10.211.55.3:8080');
+		var hubConnection = $.hubConnection(SIGNAL_R_ENDPOINT);
 		var proxy = hubConnection.createHubProxy('GummibearHub');
 
+		proxy.on('UpdateConsumption', function (continent, newValue) { 
+			if (data) {
+		    	data[continent] = newValue;
+				redrawContinent(continent, newValue);
+			}
+		});
+		
 		hubConnection.logging = true;
 		hubConnection.start().done(function () {
 			proxy.invoke('GetCurrentConsumption').done(function (result) {
 				data = result;
 				redrawData();
 			});
-		});
-		
-		proxy.on('UpdateConsumption', function (continent, newValue) { 
-			if (data) {
-		    	data[continent] = newValue;
-				redrawContinent(continent, newValue);
-			}
 		});
 	}
 	
