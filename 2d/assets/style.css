@@ -16,3 +16,9 @@ body {
 .leaflet-overlay-pane canvas[hide] {
 	opacity: 0;
 }
+
+#stats {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

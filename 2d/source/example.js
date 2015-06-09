@@ -2,6 +2,7 @@
 /// <reference path="../typings/jquery/jquery.d.ts" />
 /// <reference path="../typings/leaflet/leaflet.d.ts" />
 /// <reference path="../typings/signalr/signalr.d.ts" />
+/// <reference path="../typings/stats/stats.d.ts" />
 
 (function() {
     var SIGNAL_R_ENDPOINT = 'http://192.168.178.29:6060';
@@ -10,6 +11,7 @@
     var PIE_CHARTS_HEIGHT = 150;
     var PIXEL_UNIT = 'px';
     
+    var stats;
     var map;
     var charts = {};
     var elements = {};
@@ -52,6 +54,7 @@
     };
     
     setupSignalR();
+    initStats();
     initLeaflet();
     initCharts();
        
@@ -83,17 +86,31 @@
         }
     };
     
+    function initStats() {
+        stats = new Stats();
+        document.body.appendChild(stats.domElement);
+        
+        updateStats();
+    }
+    
+    function updateStats() {
+        requestAnimationFrame(updateStats);
+        
+        stats.update();
+    }
+    
     function initLeaflet() {
         map = L.map('container', {
             center: L.latLng(30, 10),
             zoom: 2
-        });
+        });   
         
-        var retinaSuffix = L.Browser.retina ? '@2x' : '';    
-        
-        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}' + retinaSuffix + '.png', {
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-            minZoom: 2
+            minZoom: 2,
+            detectRetina: true,
+            unloadInvisibleTiles: false,
+            updateWhenIdle: true
         }).addTo(map);
     }
     
