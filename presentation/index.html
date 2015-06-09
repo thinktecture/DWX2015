@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="utf-8">
-        <title>Cross platform 2D &amp; 3D visualizations</title>
+        <title>Cross-Plattform 2D- &amp; 3D-Datenvisualisierung in JavaScript – guckst du!</title>
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -80,32 +80,37 @@
                     <h2>Touch-Enabled Graphs</h2>
                     <a href="https://zoomcharts.com/en/gallery/all:network-graph-company-network-icons" target="_blank">
                         <img src="images/examples_1_graph.jpg" alt="Touch-Enabled, Fast and Fluid Graphs" />
-                        <p>https://zoomcharts.com/en/gallery/all:network-graph-company-network-icons</p>
+                        <small>https://zoomcharts.com/en/gallery/all:network-graph-company-network-icons</small>
                     </a>
                 </section>
                 <section>
                     <h2>Real-Time Video Manipulation</h2>
                     <a href="http://www.craftymind.com/factory/html5video/CanvasVideo.html" target="_blank">
                         <img src="images/examples_2_video.jpg" alt="Real-Time Video Manipulation" />
-                        <p>http://www.craftymind.com/factory/html5video/CanvasVideo.html</p>
+                        <small>http://www.craftymind.com/factory/html5video/CanvasVideo.html</small>
                     </a>
                 </section>
                 <section>
                     <h2>Interactive 3D Visualizations</h2>
                     <a href="https://www.blend4web.com/apps/webplayer/webplayer.html?load=../../assets/animation/nla_strips.json" target="_blank">
                         <img src="images/examples_3_screws.jpg" alt="Interactive 3D Visualizations" />
-                        <p>https://www.blend4web.com/apps/webplayer/webplayer.html?load=../../assets/animation/nla_strips.json</p>
+                        <small>https://www.blend4web.com/apps/webplayer/webplayer.html?load=../../assets/animation/nla_strips.json</small>
                     </a>
                 </section>
                 <section>
                     <h2>…Even Games</h2>
                     <a href="http://www.flightarcade.com/" target="_blank">
                         <img src="images/examples_4_flightarcade.jpg" alt="…Even Games" />
-                        <p>http://www.flightarcade.com/</p>
+                        <small>http://www.flightarcade.com/</small>
                     </a>
                 </section>
                 <section>
                     <h1>Scenario</h1>
+                </section>
+                <section>
+                    <h1 style="color: lime;">Gummibears!</h1>
+                    <img src="images/gummibears.jpg" alt="Gummi Bears" />
+                    <p>(Bouncing here and there and everywhere)</p>
                 </section>
                 <section>
                     <h2>Architecture</h2>
@@ -119,16 +124,9 @@
                     </ul>
                 </section>
                 <section>
-                    <h1 style="color: lime;">Gummibears!</h1>
-                    <img src="images/gummibears.jpg" alt="Gummi Bears" />
-                    <p>(Bouncing here and there and everywhere)</p>
-                </section>
-                <section>
                     <h2>Goal</h2>
                     <p>Visualizing real-time consumption of gummibears per region</p>
-                    <code style="color: gray;">
-                        <pre>
-Update consumption of SouthAmerica to 13.3137317022187
+                    <pre><code style="color: gray;">Update consumption of SouthAmerica to 13.3137317022187
 Update consumption of NorthAmerica to 42.3913583840353
 Update consumption of Antarctica to 83.7786154045535
 Update consumption of Europe to 18.0006652489046
@@ -139,9 +137,10 @@ Update consumption of Asia to 25.5628347470509
 Update consumption of Europe to 3.95552857364278
 Update consumption of SouthAmerica to 17.4139201632193
 Update consumption of Antarctica to 53.6258920336672
-Update consumption of Australia to 12.5058280857318
-</pre>
-                    </code>
+Update consumption of Australia to 12.5058280857318</code></pre>
+                </section>
+                <section>
+                    <h2>Let’s implement the secret algorithm…</h2>
                 </section>
                 <section>
                     <h1>2D visualization</h1>
@@ -164,36 +163,43 @@ Update consumption of Australia to 12.5058280857318
                     </p>
                 </section>
                 <section>
-                    <h2>Performance</h2>
-                    <h3>Chrome @ MacBook Pro</h3>
-                    <img src="images/jsperf.png" />
-                    <p>
-                        <small>From <a href="http://jsperf.com/html-vs-svg-vs-canvas/31">http://jsperf.com/html-vs-svg-vs-canvas/31</a></small>
-                    </p>
+                    <section>
+                        <h2>request<span style="color: lime;">Animation</span>Frame</h2>
+                        <h3>vs. Timers/setTimeout/setInterval</h3>
+                    </section>
+                    <section>
+                        <h2>requestAnimationFrame</h2>
+                        <ul>
+                            <li>Just in time (matches screen refresh rate)</li>
+                            <li>Does not execute when window is minimized or tab in the background</li>
+                            <li>Does not execute when browser is busy</li>
+                            <li>No stacking/queueing</li>
+                        </ul>
+                    </section>
                 </section>
                 <section>
-                    <h2>requestAnimationFrame</h2>
+                    <h2>Charting Libraries</h2>
                     <ul>
-                        <li>Only executed when visible to the user <br/> (will stop in background tabs!).</li>
-                        <li>No wastage of CPU and battery life.</li>
-                        <li>Frame is only drawn when browser is ready and no other frame waits for drawing.</li>
-                        <li>No “infinite” amount of queued callback functions.</li>
-                    </ul>
-                    <p>
-                                <small>From <a href="https://dev.opera.com/articles/better-performance-with-requestanimationframe/">https://dev.opera.com/articles/better-performance-with-requestanimationframe/</a></small>
-                            </p>
-                </section>
-                <section>
-                    <h2>Libraries</h2>
-                    <ul>
-                        <li>D3.js</li>
-                        <li>Chart.js</li>
-                        <li>ZoomCharts</li>
+                        <li>SVG-based</li>
+                        <ul>
+                            <li>D3.js (open source)</li>
+                            <li>HighCharts (commercial)</li>
+                        </ul>
+                        <li>Canvas-based</li>
+                        <ul>
+                            <li>Chart.js (open source)</li>
+                            <li>ZoomCharts (commercial)</li>
+                        </ul>
                     </ul>
                 </section>
                 <section>
-                    <h2>Demo</h2>
-                    <h3>Touch-enabled, cross-platform 2D visualization using ZoomCharts</h3>
+                    <section>
+                        <h2>Live Demo</h2>
+                        <h3>Touch-enabled, cross-platform 2D visualization using ZoomCharts</h3>
+                    </section>
+                    <section>
+                        <h2>Let’s bring this to Android…</h2>
+                    </section>
                 </section>
                 <section>
                     <h1>3D visualization</h1>
@@ -280,7 +286,10 @@ Update consumption of Australia to 12.5058280857318
                 </section>
                 <section>
                     <h2>Live Demo</h2>
-                    <h3>Animations make the difference</h3>
+                    <h3>Details make the difference</h3>
+                </section>
+                <section>
+                    <h2>Let’s bring this to iOS…</h2>
                 </section>
                 <section>
                     <h1>Summary</h1>
@@ -292,7 +301,6 @@ Update consumption of Australia to 12.5058280857318
                         <li>Touch-enabled</li>
                     </ul>
                 </section>
-                
                 <section>
                     <h1>Thank you!</h1>
                     <p>
@@ -306,7 +314,16 @@ Update consumption of Australia to 12.5058280857318
                     <h1>Resources</h1>
                     <small>
                     <ul>
-                        <li>TBD</li>  
+                        <li><a href="https://github.com/thinktecture/DWX2015">https://github.com/thinktecture/DWX2015</a> GitHub repository</li>
+                        <li><a href="https://developer.mozilla.org/de/docs/Web/HTML/Canvas">https://developer.mozilla.org/de/docs/Web/HTML/Canvas</a> Canvas documentation (MDN)</li>
+                        <li><a href="http://www.w3.org/TR/2dcontext/">http://www.w3.org/TR/2dcontext/</a> Canvas 2D context specification</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame</a> requestAnimationFrame documentation (MDN)</li>  
+                        <li><a href="https://www.khronos.org/registry/webgl/specs/latest/">https://www.khronos.org/registry/webgl/specs/latest/</a> WebGL Specifications</li>
+                        <li><a href="http://threejs.org/">http://threejs.org/</a> three.js</li>
+                        <li><a href="https://www.khronos.org/webgl/wiki/Main_Page">https://www.khronos.org/webgl/wiki/Main_Page</a> WebGL Wiki</li>  
+                        <li><a href="https://github.com/tweenjs/tween.js/">https://github.com/tweenjs/tween.js/</a> tween.js</li>
+                        <li><a href="https://cordova.apache.org/">https://cordova.apache.org/</a> Apache Cordova</li>
+                        <li><a href="http://weblogs.thinktecture.com/christian_liebel/2015/05/enabling-cross-platform-touch-interactions-pointer-vs-touch-events.html">http://weblogs.thinktecture.com/christian_liebel/2015/05/enabling-cross-platform-touch-interactions-pointer-vs-touch-events.html</a> Enabling cross-platform touch interactions</li>
                     </ul></small>
                 </section>
             </div>
