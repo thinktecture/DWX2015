@@ -7,6 +7,7 @@ namespace Thinktecture.Dwx2015.SignalR
 	{
 		public void Configuration(IAppBuilder app)
 		{
+			app.Use<FailSafeMiddleware>();
 			app.UseCors(CorsOptions.AllowAll);
 			app.MapSignalR();
 		}
