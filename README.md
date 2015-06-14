@@ -2,7 +2,7 @@
 Samples for the Developer Week 2015, Nuremberg
 
 ## Presentation
-Please find the PDF printout of the presentation in the `presentation` subfolder.
+Please find the presentation [on Speaker Deck](https://speakerdeck.com/chliebel/cross-plattform-2d-and-3d-datenvisualisierung-in-javascript-guckst-du).
 
 ## SignalR
 The SignalR part is hosted in an OWIN self host on Mono on a Raspberry Pi 2 running Raspbian. In order to build the SignalR project without any IDE, please install Mono and call `sh build.sh` in the `signalr` directory. In order to execute the self host, call `sh run.sh`. By default, port 8080 is used.
