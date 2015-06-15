@@ -10,7 +10,7 @@ gulp.task('deploy', ['clean-cordova'], function () {
         'index.html',
         'assets/*',
         'source/*.js',
-        'vendor/*.js'
+        'vendor/*'
     ], { base: './' })
         .pipe(gulp.dest('cordova/www'));
 });
