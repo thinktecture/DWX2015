@@ -13,14 +13,14 @@ Please make sure that your version of Mono is newer than or equal to 3.6, but le
 ## 2D
 The 2D client sample was built using Leaflet, chart.js and the SignalR client library. This sample relies on Leaflet to handle touch properly.
 
-### Android app
-In order to publish the 2D client sample as an Android app, please install Apache Cordova and execute `sh setup.sh` in the `2d` directory. This will download all dependencies, add the Android platform and install the Crosswalk plugin. For device deployment, run `sh deploy.sh`.
+### iOS app
+In order to publish the 2D client sample as an iOS app, please install Apache Cordova and execute `sh setup.sh` in the `2d` directory. This will download all dependencies and add the iOS platform. For device deployment, run `sh deploy.sh`.
 
 ## 3D
 The 3D client sample was built using three.js, tween.js and the SignalR client library. This sample uses the three.js trackball controls that rely on touch events. A touch event polyfill is included in order to support IE 10 on desktop.
 
-### iOS app
-In order to publish the 3D client sample as an iOS app, please install Apache Cordova and execute `sh setup.sh` in the `3d` directory. This will download all dependencies and add the iOS platform. For device deployment, run `sh deploy.sh`.
+### Android app
+In order to publish the 3D client sample as an Android app, please install Apache Cordova and execute `sh setup.sh` in the `3d` directory. This will download all dependencies, add the Android platform and install the Crosswalk plugin. For device deployment, run `sh deploy.sh`.
 
 ## Further Reading
 ### Installing Raspbian
