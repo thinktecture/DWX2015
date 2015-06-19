@@ -10,6 +10,8 @@ The SignalR part is hosted in an OWIN self host on Mono on a Raspberry Pi 2 runn
 ### Notes
 Please make sure that your version of Mono is newer than or equal to 3.6, but less than 4. Mono 4 has some issues with SignalR hosting that are not resolved yet. Instructions on how to install specific versions of Mono using the package manager `apt` [can be found here](http://www.mono-project.com/docs/getting-started/install/linux/#accessing-older-releases).
 
+Please edit the endpoint variables in the `examples.js` source files according to where you host SignalR.
+
 ## 2D
 The 2D client sample was built using Leaflet, chart.js and the SignalR client library. This sample relies on Leaflet to handle touch properly.
 
